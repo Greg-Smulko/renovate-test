@@ -1,0 +1,30 @@
+{
+  "extends": [
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable",
+    ":prImmediately",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":updateNotScheduled",
+    ":automergeDisabled",
+    ":ignoreModulesAndTests",
+    ":maintainLockFilesDisabled",
+    ":autodetectPinVersions",
+    "group:monorepos",
+    "group:recommended",
+    "helpers:disableTypesNodeMajor"
+  ],
+  "nuget": {
+    "enabled": true,
+    "registryUrls": ["https://api.nuget.org/v3/index.json"],
+    "managerBranchPrefix": "nuget-",
+    "prConcurrentLimit": 1
+  },
+  "npm": {
+    "managerBranchPrefix": "npm-",
+    "prConcurrentLimit": 1
+  },
+  "masterIssue": true,
+  "labels": ["renovate"],
+  "automerge": false
+}
